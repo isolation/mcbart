@@ -1,4 +1,5 @@
 local OUT_DETECTOR_PROTOCOL_VERSION = 2
+local SCRIPT_VERSION = "202203120458"
 
 local segment_id_file = fs.open("/segment_id.txt", "r")
 local segment_id = segment_id_file.readAll()
@@ -23,7 +24,7 @@ end
 
 rednet.open("left")
 
-print("detector active")
+print(("version %s"):format(SCRIPT_VERSION))
 print(("segment %s, track %s, detector %s"):format(segment_id, track_id, detector_id))
 print(("speaking detector protocol version %s"):format(OUT_DETECTOR_PROTOCOL_VERSION))
 

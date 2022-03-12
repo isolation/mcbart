@@ -1,4 +1,5 @@
 local IN_SIGN_PROTOCOL_VERSION = 2
+local SCRIPT_VERSION = "202203112056"
 
 local track_id_file = fs.open("/track_id.txt", "r")
 local track_id = track_id_file.readAll()
@@ -30,6 +31,7 @@ mon_right.write("Screen right started")
 
 rednet.open("top")
 
+print(("version %s"):format(SCRIPT_VERSION))
 print(("running as station %s track %s"):format(station_id, track_id))
 print(("understanding sign protocol version %s"):format(IN_SIGN_PROTOCOL_VERSION))
 

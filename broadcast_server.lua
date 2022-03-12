@@ -1,5 +1,6 @@
 local IN_DETECTOR_PROTOCOL_VERSION = 2
 local OUT_SIGN_PROTOCOL_VERSION = 2
+local SCRIPT_VERSION = "202203120458"
 
 local function Split(s, delimeter)
   local result = {};
@@ -29,6 +30,7 @@ end
 
 rednet.open("back")
 
+print(("version %s"):format(SCRIPT_VERSION))
 print("broadcast server active")
 
 while true do
